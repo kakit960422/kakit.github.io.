@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Protfolio2020</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- all flont setting -->
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.w3-third img{margin-bottom: 0px; margin-left: 0px; margin-right: 0px; opacity: 0.8; cursor: pointer}
+.w3-third img:hover{opacity: 1}
+</style>
+
+<script>
+    // Script to open and close sidebar
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+    }
+     
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+    }
+    
+    // Modal Image Gallery
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+    
+    </script>
+
+</head>
+
+<body class="w3-light-grey w3-content" style="max-width:1200px">
+
+
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:230px;font-weight:bold" id="mySidebar"><br>
+    <a href="prothome.html" style="text-decoration:none"><h3 class="w3-padding-64 w3-center" ><b>YEUNG<br>TONY</b></h3></a>
+    <a href="#0" onclick="w3_close()" class="w3-bar-item w3-button">PORTFOLIO</a> 
+    <a href="protme.html" onclick="w3_close()" class="w3-bar-item w3-button" >FIND ME</a> 
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large"><img src="/photo/10 momo.jpg" style="width:10%"></a>
+  </nav>
+  
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+    <span class="w3-left w3-padding">Kakit</span>
+    <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+  </header>
+  
+<!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+  
+
+  
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:230px">
+  
+    <!-- Push down content on small screens --> 
+    <div class="w3-hide-large" style="margin-top:100px"></div>
+    
+    <!--Mine-->
+    <style type="text/css">
+        .body1{text-align:right; margin-top: 10pt; margin-right: 3pt; opacity: .3; font-family: "Raleway", sans-serif;}
+    </style>
+    
+        <h1 class="body1" id="0">Protfolio 2020</h1>
+
+    <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+
+</style>
+    <!-- Photo grid -->
+  <div class="w3-row">
+    <div class="w3-third">
+      <img src="/photo/10 momo.jpg" style="width:100%" onclick="onClick(this)" alt="<i>Now, we will be the one. 2019</i>">
+      <img src="/w3images/girl_mountain.jpg" style="width:100%" onclick="onClick(this)" alt="What a beautiful scenery this sunset">
+      <img src="/w3images/girl.jpg" style="width:100%" onclick="onClick(this)" alt="The Beach. Me. Alone. Beautiful">
+    </div>
+
+    <div class="w3-third">
+      <img src="/photo/9 cicy1.jpeg" style="width:100%" onclick="onClick(this)" alt="<i>Watch carefully, that’s me. 2019</i><br>Product Video: https://youtu.be/j2Jsa_Y2VHY">
+      <img src="/w3images/man_bench.jpg" style="width:100%" onclick="onClick(this)" alt="Waiting for the bus in the desert">
+      <img src="/w3images/natureboy.jpg" style="width:100%" onclick="onClick(this)" alt="Nature again.. At its finest!">
+    </div>
+    
+    <div class="w3-third">
+      <img src="/w3images/girl.jpg" style="width:100%" onclick="onClick(this)" alt="Canoeing again">
+      <img src="/w3images/girl_train.jpg" style="width:100%" onclick="onClick(this)" alt="A girl, and a train passing">
+      <img src="/w3images/closegirl.jpg" style="width:100%" onclick="onClick(this)" alt="What a beautiful day!">
+    </div>
+  </div>
+
+
+    <!-- Pagination -->
+  <footer>
+  <div class="w3-right w3-padding-32" style="text-align:right; opacity: .6;">
+    <div class="w3-bar">
+      <a href="#0" class="w3-bar-item w3-button w3-hover-black">Top</a>
+
+    </div>
+  </div>
+  </footer>
+
+  <p style="text-align: center; margin-top: 60pt; opacity: .1;">By Tony</p>
+
+<!-- End page content -->
+</div>
+
+</body>
+</html>
